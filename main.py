@@ -46,6 +46,7 @@ def get_table_of_interesting_words(directory, number=20):
     common_words = sorted(result_dict, key = lambda x: x["Total Occurences"], reverse=True)
     table_of_words = pd.DataFrame(common_words[:number])
     table_of_words.to_html('result.html')
+    print(table_of_words)
 
 
 def get_word_frequency(corpus, file_name, max_word_len=7):
